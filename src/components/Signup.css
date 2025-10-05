@@ -1,0 +1,188 @@
+/* Import Modern Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  color: #475569; /* slate-600 */
+  /* Consistent background with soft gradient blobs */
+  background-color: #f8fafc; /* slate-50 */
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(251, 146, 60, 0.15), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(34, 211, 238, 0.15), transparent 40%);
+  overflow-x: hidden;
+}
+
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* --- Consistent Glassmorphism Effect --- */
+.signup-form-container {
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  padding: 3rem 4rem;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.signup-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a; /* slate-900 */
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.signup-subtitle {
+  font-size: 1rem;
+  color: #64748b; /* slate-500 */
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.signup-link, .terms-link {
+  color: #ea580c; /* orange-600 */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.signup-link:hover, .terms-link:hover {
+  color: #f97316; /* orange-500 */
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Consistent Modern Form Inputs --- */
+.form-input {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  background-color: #f1f5f9; /* slate-100 */
+  border: 1px solid #e2e8f0; /* slate-200 */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #f97316; /* orange-500 */
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15);
+}
+
+.password-validation-item {
+  display: flex;
+  align-items: center;
+  color: #94a3b8; /* slate-400 */
+}
+
+.password-validation-item.valid {
+  color: #0d9488; /* teal-600 (A nice accent from the palette) */
+}
+
+/* --- Consistent Primary Action Button --- */
+.submit-button {
+  width: 100%;
+  background-color: #ea580c; /* orange-600 */
+  color: white;
+  font-weight: 700;
+  padding: 0.9rem 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px -5px rgba(234, 88, 12, 0.4);
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #f97316; /* orange-500 */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -8px rgba(234, 88, 12, 0.5);
+}
+
+.submit-button:disabled {
+  background-color: #fdba74; /* orange-300 */
+  cursor: not-allowed;
+}
+
+.divider {
+  text-align: center;
+  color: #94a3b8; /* slate-400 */
+  margin: 2rem 0 1.5rem;
+}
+
+/* --- Consistent Social Buttons --- */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9; /* slate-100 */
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.social-button:hover {
+  background-color: #fff7ed; /* orange-50 */
+  border-color: #fed7aa; /* orange-200 */
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) saturate(100%) invert(55%) sepia(87%) saturate(1421%) hue-rotate(352deg) brightness(96%) contrast(94%);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 640px) {
+  .signup-form-container {
+    padding: 2.5rem 2rem;
+    width: 100%;
+  }
+  .signup-title {
+    font-size: 1.75rem;
+  }
+  .name-fields {
+    flex-direction: column;
+  }
+}

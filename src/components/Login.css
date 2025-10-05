@@ -1,0 +1,174 @@
+/* Import Modern Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  color: #475569; /* slate-600 */
+  /* Background with soft gradient blobs for the glassmorphism to work */
+  background-color: #f8fafc; /* slate-50 */
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(251, 146, 60, 0.15), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(34, 211, 238, 0.15), transparent 40%);
+  overflow-x: hidden;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* --- Glassmorphism Effect --- */
+.login-card {
+  /* The Glass Effect */
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  padding: 3rem;
+  border-radius: 24px; /* Larger radius for a softer look */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a; /* slate-900 */
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #64748b; /* slate-500 */
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.login-link {
+  color: #ea580c; /* orange-600 */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #f97316; /* orange-500 */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Modern Form Inputs --- */
+.login-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  background-color: #f1f5f9; /* slate-100 */
+  border: 1px solid #e2e8f0; /* slate-200 */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #f97316; /* orange-500 */
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15);
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #475569; /* slate-600 */
+  margin-top: -0.5rem; /* Adjust spacing */
+}
+
+/* --- Primary Action Button --- */
+.login-button {
+  width: 100%;
+  background-color: #ea580c; /* orange-600 */
+  color: white;
+  font-weight: 700;
+  padding: 0.9rem 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px -5px rgba(234, 88, 12, 0.4);
+}
+
+.login-button:hover:not(:disabled) {
+  background-color: #f97316; /* orange-500 */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -8px rgba(234, 88, 12, 0.5);
+}
+
+.divider {
+  text-align: center;
+  color: #94a3b8; /* slate-400 */
+  margin: 2rem 0 1.5rem;
+}
+
+/* --- Social Buttons --- */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9; /* slate-100 */
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.social-button:hover {
+  background-color: #fff7ed; /* orange-50 */
+  border-color: #fed7aa; /* orange-200 */
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  /* Filter to generate an orange color from black */
+  filter: brightness(0) saturate(100%) invert(55%) sepia(87%) saturate(1421%) hue-rotate(352deg) brightness(96%) contrast(94%);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 2.5rem 1.5rem;
+    width: 100%;
+  }
+
+  .login-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* (The rest of your utility classes like .remember-me can remain as they are) */
