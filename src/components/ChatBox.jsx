@@ -4,7 +4,9 @@ import api from "../api/axios";
 import dayjs from "dayjs";
 
 // Connect once globally
-const socket = io("http://localhost:3000");
+const socket = io("https://skill-barter-backend-1.onrender.com", {
+  withCredentials: true,
+});
 
 const ChatBox = () => {
   const [selectedUser, setSelectedUser] = useState(null);
